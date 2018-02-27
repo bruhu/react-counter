@@ -1,3 +1,37 @@
+## React Counter
+An exercise with React states, conditional rendering and proper way to set states.
+
+Check the live example of the final app https://leodvg.github.io/React-Counter/
+
+## Workflow:
+- Bootstrap a React app and use the App component
+- Store 2 states: 
+-- one for the status of the counter (show/hide)
+-- one for the counter (0)
+- Create 3 functions that will be called from the buttons in the UI
+-- increase the counter
+-- decrease the counter
+-- toggle the counter
+- implement the render
+
+
+## Requirments:
+- ES6
+- Avoid antipattern setting states
+- Use conditional rendering
+
+
+## Bonus:
+- Publish to GH Pages your finished app
+
+
+
+===============================
+
+# REACT DOCS
+
+## Table of Contents
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
