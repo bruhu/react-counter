@@ -1,7 +1,7 @@
 ## React Counter
 An exercise with React states, conditional rendering and proper way to set states.
 
-Check the live example of the final app https://leodvg.github.io/React-Counter/
+Check the live example of the final app https://leandroDCI.github.io/React-Counter/
 
 ## Workflow:
 - Bootstrap a React app and use the App component
