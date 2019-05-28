@@ -3,10 +3,17 @@ import { connect } from "react-redux";
 
 class Counter extends Component {
   increase = () => {
+    //now we dispatch the action:
+    this.props.dispatch({
+      type: "INCREASE"
+    });
     console.log("Want tos inc");
   };
 
   decrease = () => {
+    this.props.dispatch({
+      type: "DECREASE"
+    });
     console.log("Want to decrease counter");
   };
   render() {
