@@ -2,20 +2,20 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class Counter extends Component {
-  increment = () => {
+  increase = () => {
     console.log("Want tos inc");
   };
 
-  decrement = () => {
+  decrease = () => {
     console.log("Want to decrease counter");
   };
   render() {
     return (
       <div>
         <h2>Counter and Toggle - Update</h2>
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
-        <div>I'm a number</div>
+        <button onClick={this.increase}>+</button>
+        <button onClick={this.decrease}>-</button>
+        <div>{this.props.count}</div>
       </div>
     );
   }
