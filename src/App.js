@@ -1,48 +1,64 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       show: true,
-      count: 0,
-    }
+      count: 0
+    };
   }
 
   Reset = () => {
-    this.setState(
-      { count: 0 }
-    )
-  }
+    this.setState({ count: 0 });
+  };
 
-  IncrementItem = () => {
-    //WRONG! ANTIPATTERN!
-    //this.setState({count: this.state.count + 1})
-    //CORRECT prevState func
-    this.setState(prevState => {
-      console.log("This is prev", prevState)
-      return { count: prevState.count + 1 }
-    })
-  }
+  updateCounter = type => {
+    switch (type) {
+      case "INCREMENT":
+        console.log("Going to increment");
+        return this.setState(state => {
+          return {
+            count: state.count + 1
+          };
+        });
+      case "DECREMENT":
+        console.log("Going to decrement");
+        return this.setState(state => {
+          return {
+            count: state.count - 1
+          };
+        });
+      default:
+        return this.state;
+    }
+  };
 
-  DecreaseItem = () => {
-    this.setState(
-      prevState => {
-        console.log("This is prev", prevState)
-        return { count: prevState.count - 1 }
-      }
-    )
-  }
+  //This was there before updateCounter:
+  // IncrementItem = () => {
+  //   //WRONG! ANTIPATTERN!
+  //   //this.setState({count: this.state.count + 1})
+  //   //CORRECT prevState func
+  //   this.setState(prevState => {
+  //     console.log("This is prev", prevState);
+  //     return { count: prevState.count + 1 };
+  //   });
+  // };
+
+  // DecreaseItem = () => {
+  //   this.setState(prevState => {
+  //     console.log("This is prev", prevState);
+  //     return { count: prevState.count - 1 };
+  //   });
+  // };
 
   ToggleClick = () => {
-    this.setState(
-      prevState => {
-        return { show: !prevState.show }
-      });
-  }
+    this.setState(prevState => {
+      return { show: !prevState.show };
+    });
+  };
 
   render() {
     return (
@@ -53,13 +69,17 @@ class App extends Component {
         </header>
         <div className="App-intro">
           <h2>Counter and Toggle - Update</h2>
-          <button onClick={this.IncrementItem}>Click to increment by 1</button>
-          <button onClick={this.DecreaseItem}>Click to decrease by 1</button>
+          <button onClick={() => this.updateCounter("INCREMENT")}>
+            Click to increment by 1
+          </button>
+          <button onClick={() => this.updateCounter("DECREMENT")}>
+            Click to decrease by 1
+          </button>
           <button onClick={this.ToggleClick}>
-            {this.state.show ? 'Hide number' : 'Show number'}
+            {this.state.show ? "Hide number" : "S'how number"}
           </button>
           <button onClick={this.Reset}>Reset</button>
-          {this.state.show ? <h2>{this.state.count}</h2> : ''}
+          {this.state.show ? <h2>{this.state.count}</h2> : ""}
         </div>
       </div>
     );
