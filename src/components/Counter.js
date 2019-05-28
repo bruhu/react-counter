@@ -18,12 +18,18 @@ class Counter extends Component {
   };
   render() {
     return (
+        <React.Fragment>
       <div>
-        <h2>Counter and Toggle - Update</h2>
+        <h2>Counter with Redux</h2>
         <button onClick={this.increase}>+</button>
         <button onClick={this.decrease}>-</button>
         <div>{this.props.count}</div>
       </div>
+      <div>
+          <h2>But how many clicks?</h2>
+          <div>{this.props.click}</div>
+      </div>
+      </React.Fragment>
     );
   }
 }
@@ -32,7 +38,8 @@ class Counter extends Component {
 // we create a propi n the fly using state.count
 const mapStateToProps = state => {
   return {
-    count: state.count
+    count: state.count,
+    click: state.click
   };
 };
 
