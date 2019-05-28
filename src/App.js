@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { createStore } from "redux";
+import { Provider } from "react-redux";
 import { reducer } from "./reducers";
 // ^ this is after running npm i redux react-redux
 
@@ -76,6 +77,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
+          <Provider>
+            <Counter />
+          </Provider>
           {/* <h2>Counter and Toggle - Update</h2>
           <button onClick={() => this.updateCounter("INCREMENT")}>
             Click to increment by 1
@@ -88,7 +92,6 @@ class App extends Component {
           </button>
           <button onClick={this.Reset}>Reset</button>
           {this.state.show ? <h2>{this.state.count}</h2> : ""} */}
-          <Counter />
         </div>
       </div>
     );
