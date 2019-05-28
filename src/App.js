@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Counter from "./components/Counter";
 
 class App extends Component {
   constructor(props) {
@@ -80,6 +81,7 @@ class App extends Component {
           </button>
           <button onClick={this.Reset}>Reset</button>
           {this.state.show ? <h2>{this.state.count}</h2> : ""} */}
+          <Counter />
         </div>
       </div>
     );
