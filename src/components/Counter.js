@@ -18,17 +18,17 @@ class Counter extends Component {
   };
   render() {
     return (
-        <React.Fragment>
-      <div>
-        <h2>Counter with Redux</h2>
-        <button onClick={this.increase}>+</button>
-        <button onClick={this.decrease}>-</button>
-        <div>{this.props.count}</div>
-      </div>
-      <div>
+      <React.Fragment>
+        <div>
+          <h2>Counter with Redux</h2>
+          <button onClick={this.increase}>+</button>
+          <button onClick={this.decrease}>-</button>
+          <div>{this.props.count}</div>
+        </div>
+        <div>
           <h2>But how many clicks?</h2>
           <div>{this.props.click}</div>
-      </div>
+        </div>
       </React.Fragment>
     );
   }
