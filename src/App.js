@@ -68,7 +68,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
-          <h2>Counter and Toggle - Update</h2>
+          {/* <h2>Counter and Toggle - Update</h2>
           <button onClick={() => this.updateCounter("INCREMENT")}>
             Click to increment by 1
           </button>
@@ -79,7 +79,7 @@ class App extends Component {
             {this.state.show ? "Hide number" : "S'how number"}
           </button>
           <button onClick={this.Reset}>Reset</button>
-          {this.state.show ? <h2>{this.state.count}</h2> : ""}
+          {this.state.show ? <h2>{this.state.count}</h2> : ""} */}
         </div>
       </div>
     );
