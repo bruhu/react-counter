@@ -16,6 +16,11 @@ class Counter extends Component {
     });
     console.log("Want to decrease counter");
   };
+
+  reset = () => {
+    this.props.dispatch({ type: "RESET" });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -28,6 +33,9 @@ class Counter extends Component {
         <div>
           <h2>But how many clicks?</h2>
           <div>{this.props.click}</div>
+        </div>
+        <div>
+          <button onClick={this.reset}>Reset!</button>
         </div>
       </React.Fragment>
     );

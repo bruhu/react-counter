@@ -8,6 +8,7 @@ import { reducer } from "./reducers";
 import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./components/Counter";
+import Footer from "./components/Footer";
 
 // REMEMBER TO ATTACH THE DEVTOOL
 const store = createStore(
@@ -82,6 +83,7 @@ class App extends Component {
         <div className="App-intro">
           <Provider store={store}>
             <Counter />
+            <Footer />
           </Provider>
           {/* <h2>Counter and Toggle - Update</h2>
           <button onClick={() => this.updateCounter("INCREMENT")}>
