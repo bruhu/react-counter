@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+
+import { createStore } from "redux";
+import { reducer } from "./reducers";
+// ^ this is after running npm i redux react-redux
+
 import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./components/Counter";
 
+// REMEMBER TO ATTACH THE DEVTOOL
+const store = createStore(reducer);
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,30 +19,30 @@ class App extends Component {
     };
   }
 
-  Reset = () => {
-    this.setState({ count: 0 });
-  };
+  // Reset = () => {
+  //   this.setState({ count: 0 });
+  // };
 
-  updateCounter = type => {
-    switch (type) {
-      case "INCREMENT":
-        console.log("Going to increment");
-        return this.setState(state => {
-          return {
-            count: state.count + 1
-          };
-        });
-      case "DECREMENT":
-        console.log("Going to decrement");
-        return this.setState(state => {
-          return {
-            count: state.count - 1
-          };
-        });
-      default:
-        return this.state;
-    }
-  };
+  // updateCounter = type => {
+  //   switch (type) {
+  //     case "INCREMENT":
+  //       console.log("Going to increment");
+  //       return this.setState(state => {
+  //         return {
+  //           count: state.count + 1
+  //         };
+  //       });
+  //     case "DECREMENT":
+  //       console.log("Going to decrement");
+  //       return this.setState(state => {
+  //         return {
+  //           count: state.count - 1
+  //         };
+  //       });
+  //     default:
+  //       return this.state;
+  //   }
+  // };
 
   //This was there before updateCounter:
   // IncrementItem = () => {

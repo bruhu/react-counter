@@ -1,13 +1,22 @@
 //THIS WILL BE OUR REDUCER
 
-//everything uppercase is temporary
+const initialState = {
+  count: 0
+};
 
-const reducer = (INITIAL, action) => {
-  switch (key) {
-    case value:
-      break;
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "INCREASE":
+      return {
+        count: state.count + 1
+      };
+
+    case "DECREASE":
+      return {
+        count: state.count - 1
+      };
 
     default:
-      break;
+      return state;
   }
 };
