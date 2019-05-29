@@ -14,7 +14,7 @@ export const reducer = (state = initialState, action) => {
         count: state.count + 1,
         click: state.click + 1,
         status: "INCREASED",
-        date: new Date()
+        date: new Date().toDateString()
       };
 
     case "DECREASE":
@@ -22,7 +22,7 @@ export const reducer = (state = initialState, action) => {
         count: state.count - 1,
         click: state.click + 1,
         status: "DECREASED",
-        date: new Date()
+        date: new Date().toDateString()
       };
 
     case "RESET":
@@ -30,7 +30,7 @@ export const reducer = (state = initialState, action) => {
         count: 0,
         click: 0,
         status: "RESETED",
-        date: new Date()
+        date: new Date().toDateString()
       };
 
     default:
