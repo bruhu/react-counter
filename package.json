@@ -7,6 +7,7 @@
   "homepage": "https://leandroDCI.github.io/React-Counter/",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "lodash.template": "^4.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
